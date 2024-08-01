@@ -7,6 +7,7 @@ import lombok.ToString;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
@@ -15,7 +16,7 @@ import java.util.UUID;
 //모든 엔티티들의 공통 필드
 @Getter
 @ToString
-@EntityListeners(AuditingFields.class) //엔티티의 변화를 감지하고 데이블의 데이터를 조작
+@EntityListeners(AuditingEntityListener.class) //엔티티의 변화를 감지하고 데이블의 데이터를 조작
 @MappedSuperclass //다른 엔티티들이 상속받을 수 있게 해줌
 public abstract class AuditingFields {
 

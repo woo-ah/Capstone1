@@ -16,7 +16,7 @@
 
 		FROM tbpostcmt
 		WHERE tbpostcmt.id = #{id}
-	</select>]]]00-----
+	</select>
 	<select id="list" parameterType="hashMap" resultType="com.example.capstone1.dto.TbpostcmtDto$DetailResDto">
 		SELECT tbpostcmt.id
 		FROM tbpostcmt

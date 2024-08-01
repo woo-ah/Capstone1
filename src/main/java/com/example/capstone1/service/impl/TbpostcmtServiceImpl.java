@@ -24,7 +24,6 @@ public class TbpostcmtServiceImpl implements TbpostcmtService {
         this.tbpostcmtMapper = tbpostcmtMapper;
     }
 
-    /**/
 
     @Override
     public TbpostcmtDto.CreateResDto create(TbpostcmtDto.CreateReqDto param){
