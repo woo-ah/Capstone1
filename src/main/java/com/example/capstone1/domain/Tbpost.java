@@ -1,5 +1,6 @@
 package com.example.capstone1.domain;
 
+import com.example.capstone1.dto.TbpostDto;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -32,7 +33,7 @@ public class Tbpost extends AuditingFields{
     }
 
     //엔티티를 dto로 변환하는 함수
-    public TbpostDto.CreateResSto toCreateResDto(){
+    public TbpostDto.CreateResDto toCreateResDto(){
        return TbpostDto.CreateResDto.builder().id(this.getId()).build();
     }
 }

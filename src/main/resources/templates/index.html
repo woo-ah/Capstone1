@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+<button onclick="logout()">LOGOUT</button>
+
+<script>
+    let myTbuserId = localStorage.getItem("myTbuserId");
+    if(myTbuserId == null || myTbuserId === ""){
+        alert("로그인 이전입니다!!");
+    } else {
+        alert("로그인 감사합니다 : " + myTbuserId);
+    }
+
+    function logout(){
+        localStorage.clear();
+        alert("로그아웃 완료!!");
+    }
+</script>
+
+</body>
+</html>

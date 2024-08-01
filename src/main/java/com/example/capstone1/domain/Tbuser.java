@@ -1,5 +1,6 @@
 package com.example.capstone1.domain;
 
+import com.example.capstone1.dto.TbuserDto;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -38,11 +39,11 @@ public class Tbuser extends AuditingFields{
     }
 
     public static Tbuser of(String username, String password, String name, String nick, String phone, String gender, String content, String img){
-        return new Tbuser(username, password,name,nick,phone,gender,content,img)
+        return new Tbuser(username, password,name,nick,phone,gender,content,img);
     }
 
 //필요한 데이터만 설정할 수 있음
     public TbuserDto.CreateResDto toCreateResDto(){
-        return TbuserDto.CreateResDto.builer().id(this.getId()).build;
+        return TbuserDto.CreateResDto.builder().id(this.getId()).build();
     }
 }

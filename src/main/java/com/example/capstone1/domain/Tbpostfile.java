@@ -1,5 +1,6 @@
 package com.example.capstone1.domain;
 
+import com.example.capstone1.dto.TbpostfileDto;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Index;
