@@ -1,6 +1,8 @@
 package com.example.capstone1.controller;
 
+import com.example.capstone1.domain.Tbnotice;
 import com.example.capstone1.dto.DefaultDto;
+import com.example.capstone1.repository.TbnoticeRepository;
 import com.example.capstone1.util.FileUpload;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.servlet.http.HttpServletRequest;
@@ -16,9 +18,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@RequestMapping("/api/test")
+@RequestMapping("/api/tbnotice")
 @RestController
 public class TbnoticeRestController {
+
     private final TbnoticeRepository tbnoticeRepository;
     public TbnoticeRestController(TbnoticeRepository tbnoticeRepository) {
         this.tbnoticeRepository = tbnoticeRepository;
