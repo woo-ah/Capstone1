@@ -18,10 +18,10 @@ password :
 <script>
     function create_tbuser(){
         $.ajax({
-            url: "/api/tbuser",
+            url: "/api/tbuser", //서버에 요청할 url
             type: "POST",
             contentType : 'application/json; charset=utf-8',
-            data: JSON.stringify({
+            data: JSON.stringify({ //서버에 요청할 때 보낼 데이터 서버에 보낼 데이터를 JSON 문자열로 변환
                 username : $("#create_tbuser_username").val()
                 ,password : $("#create_tbuser_password").val()
             }),
